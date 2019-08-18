@@ -5,11 +5,15 @@ interface Props {
   initCount: number
 }
 
-export function Counter({ initCount }: Props) {
+export function MultipleUseEffect({ initCount }: Props) {
   const [counter, setCounter] = useState(initCount);
 
   useEffect(() => {
-    console.log('use Effect');
+    console.log('useEffect 1');
+  }, []);
+
+  useEffect(() => {
+    console.log('useEffect 2');
   }, []);
 
   return (
