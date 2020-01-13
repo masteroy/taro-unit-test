@@ -1,9 +1,9 @@
 import { MultipleUseEffect } from './MultipleUseEffect';
-import { renderToString } from 'nerv-server';
+import { renderIntoDocument } from 'nerv-test-utils';
 
 describe('<MultipleUseEffect />', () => {
     it('should render properly', () => {
-        const component = renderToString(<MultipleUseEffect initCount={0} />);
+        const component = renderIntoDocument(<MultipleUseEffect initCount={0} />);
         expect(component).toMatchSnapshot();
     });
 });

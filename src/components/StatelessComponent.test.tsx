@@ -1,9 +1,9 @@
 import { StatelessComponent } from './StatelessComponent';
-import { renderToString } from 'nerv-server';
+import { renderIntoDocument } from 'nerv-test-utils';
 
 describe('<Counter />', () => {
     it('should render properly', () => {
-        const component = renderToString(<StatelessComponent />);
+        const component = renderIntoDocument(<StatelessComponent />);
         expect(component).toMatchSnapshot();
     });
 });
